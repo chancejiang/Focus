@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Focus - ÔÁ¼Î¿Æ¼¼ÈÎÎñ¹ÜÀí - Ğ­×÷¾ÍÊÇÁ¦Á¿£¡</title>
+    <title>Focus - ä»»åŠ¡ç®¡ç†</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
     <link rel="stylesheet" href="style/mobile.css" type="text/css">
   </head>
@@ -10,11 +10,11 @@
 
     <header>
       <ul id="navigation">
-        <li><a href="#!" class="navmine">ÎÒµÄÈÎÎñ</a></li>
-        <li><a href="#!/team" class="navteam">ÍÅ¶ÓÈÎÎñ</a></li>
-        <li><a href="#!/focus" class="navall">×îĞÂÈÎÎñ</a></li>
-        <li><a href="#!/tags" class="navtags">±êÇ©</a></li>
-        <li><a href="#!/sync" class="navshare">Í¬²½</a></li>
+        <li><a href="#!" class="navmine">æˆ‘çš„ä»»åŠ¡</a></li>
+        <li><a href="#!/team" class="navteam">å›¢é˜Ÿä»»åŠ¡</a></li>
+        <li><a href="#!/focus" class="navall">æœ€æ–°ä»»åŠ¡</a></li>
+        <li><a href="#!/tags" class="navtags">æ ‡ç­¾åˆ†ç±»</a></li>
+        <li><a href="#!/sync" class="navshare">åŒæ­¥æ•°æ®</a></li>
       </ul>
       
       <form id="create" class="clearfix" action="#create">
@@ -22,7 +22,7 @@
           <input type="text" name="message" id="message" 
                  placeholder="What am I working on?" value="" />
         </div>
-        <input type="submit" class="btn" id="createbtn" value="´´½¨ÈÎÎñ" />
+        <input type="submit" class="btn" id="createbtn" value="åˆ›å»ºä»»åŠ¡" />
       </form>
     </header>
 
@@ -33,32 +33,32 @@
     </div>
 
     <div id="footer">
-      <a href="#!/logout">ÍË³ö</a>
+      <a href="#!/logout">é€€å‡º</a>
     </div>
 
     <script type="text/html" id="sync_tpl">
 
       <form action="#sync" id="syncform" class="mainform">
         <fieldset class="first">
-          <label>ÓÃ»§Ãû£º
+          <label>ç”¨æˆ·åï¼š
             <span><input type="text" name="name" value="{{name}}"
                          placeholder="johndoe" /></span>
           </label>
         </fieldset>
         <fieldset>
-          <label>ÃÜÂë£º
+          <label>å¯†ç ï¼š
             <span><input type="password" value="{{password}}"
                          name="password" /></span>
           </label>
         </fieldset>
         <fieldset>
-          <label>CouchDBÖ÷»ú
+          <label>CouchDBä¸»æœº
             <span><input type="text" name="server" value="{{server}}" 
                          placeholder="example.com" /></span>
           </label>
         </fieldset>        
         <fieldset class="last">
-          <label>¹¤×÷×é£¨Êı¾İ¿âÃû£©
+          <label>å·¥ä½œç»„ï¼ˆæ•°æ®åº“åï¼‰
           <span><input type="text" name="workgroup" value="{{workgroup}}"
                        placeholder="mywork" /></span>
           </label>
@@ -67,16 +67,16 @@
         <input type="hidden" name="action" id="syncaction" />
         
         <div id="syncbtns">
-          <button class="syncbtn" data-action="push"><div>ÍÆÊı¾İ</div></button>
-          <button class="syncbtn middle" data-action="pull"><div>À­Êı¾İ</div></button>
-          <button class="syncbtn {{cssClass}}" data-action="sync"><div>Ë«ÏòÍ¬²½</div></button>
+          <button class="syncbtn" data-action="push"><div>æ¨æ•°æ®</div></button>
+          <button class="syncbtn middle" data-action="pull"><div>æ‹‰æ•°æ®</div></button>
+          <button class="syncbtn {{cssClass}}" data-action="sync"><div>åŒå‘åŒæ­¥</div></button>
         </div>
       </form>
 
     </script>
 
     <script type="text/html" id="tags_tpl">
-      <h2>±êÇ©</h2>
+      <h2>æ ‡ç­¾</h2>
       <ul class="tags">
       {{#tags}}
         <li><a href="#!/tags/{{name}}" style="font-size:{{size}}px">
@@ -84,9 +84,9 @@
         </a></li>
       {{/tags}}
       </ul>
-      {{^tags}}<div class="none">ÔİÊ±Ã»ÓĞ±êÇ©Å¶ :(</div>{{/tags}}
+      {{^tags}}<div class="none">æš‚æ—¶æ²¡æœ‰æ ‡ç­¾å“¦ :(</div>{{/tags}}
 
-      <h2>ÒıÓÃ</h2>
+      <h2>å¼•ç”¨</h2>
       <ul class="mentions">
         {{#mentions}}
         <li><a href="#!/mentions/{{name}}" style="font-size:{{size}}px">
@@ -94,7 +94,7 @@
         </a></li>
         {{/mentions}}
       </ul>
-      {{^mentions}}<div class="none">ÔİÊ±Ã»ÓĞÈËÒıÓÃÅ¶ :(</div>{{/mentions}}
+      {{^mentions}}<div class="none">æš‚æ—¶æ²¡æœ‰äººå¼•ç”¨å“¦ :(</div>{{/mentions}}
     </script>
 
     <script type="text/html" id="sync_denied">
@@ -106,53 +106,53 @@
 
     <script type="text/html" id="login_tpl">
       <form action="#login" class="modalform">
-        <h3>Focus - µÇÂ¼</h3>
+        <h3>Focus - ç™»å½•</h3>
         
         <label for="email">
-          <span>ÓÊÏä</span>
+          <span>é‚®ç®±</span>
           <input type="email" autocorrect="off" autocapitalize="off" 
                  value="" name="email" 
                  placeholder="email" />
         </label>
         <label for="password">
-          <span>ÃÜÂë</span>
+          <span>å¯†ç </span>
           <input type="password" value="{{password}}" name="password" />
         </label>
         <input type="submit" value="Login" />
-        or <a href="#!/signup">×¢²áÕÊºÅ</a>
+        or <a href="#!/signup">æ³¨å†Œå¸å·</a>
       </form>
     </script>
 
     <script type="text/html" id="signup">
       <form action="#signup" class="modalform">
-        <h3>Focus - Sign Up</h3>
+        <h3>Focus - æ³¨å†Œå¸å·</h3>
         
         <img id="gravatar_preview" />
 
         <label for="email">
-          <span>ÓÊÏä</span>
+          <span>é‚®ç®±</span>
           <input type="email" autocorrect="off" autocapitalize="off" 
                  id="signup_email" 
                  value="" name="email" placeholder="username" />
         </label>
         <label for="password" {{display_pass}}>
-          <span>ÃÜÂë</span>
+          <span>å¯†ç </span>
           <input type="password" value="" name="password" />
         </label>
 
         <label for="name">
-          <span>ĞÕÃû/span>
+          <span>å§“å/span>
           <input type="text" autocorrect="off" autocapitalize="off" 
                  id="signup_name" value="" name="name" />
         </label>
 
         <label for="email" style="display:none;" >
-          <span>WorkGroup</span>
+          <span>å·¥ä½œç»„</span>
           <input type="text" autocorrect="off" autocapitalize="off" 
                  value="local" name="workgroup" placeholder="username" />
         </label>
-        <input type="submit" value="Sign Up" />
-        <span {{display_pass}}>or <a href="#!/login">Login</a></span>
+        <input type="submit" value="æ³¨å†Œå¸å·" />
+        <span {{display_pass}}>or <a href="#!/login">ç™»å½•</a></span>
       </form>
     </script>
     
@@ -170,7 +170,7 @@
             </a>
         </li>
         {{/profile}}{{/users}}
-        {{^users}}<li class="none">Nobody on your team yet</li>{{/users}}
+        {{^users}}<li class="none">æ‚¨çš„å°ç»„è¿˜æ²¡äººåŠ å…¥</li>{{/users}}
       </ul>
     </script>
 
@@ -217,11 +217,11 @@
         <h2>{{name}}</h2>
       </div>
       {{/profile}}
-      <h2>µ±Ç° | Now</h2>
+      <h2>å½“å‰ | Now</h2>
       {{{now}}}
-      <h2>ÑÓºó | Later</h2>
+      <h2>å»¶å | Later</h2>
       {{{later}}}
-      <h2>ÒÑÍê³É | Done</h2>
+      <h2>å·²å®Œæˆ | Done</h2>
       {{{done}}}
     </script>
 
@@ -268,12 +268,12 @@
       <form action="#edit" id="editform" class="mainform">
 
         <div id="editheader">
-          <a href="Javascript:history.back()" class="back btn">&lt; ·µ»Ø</a>
+          <a href="Javascript:history.back()" class="back btn">&lt; è¿”å›</a>
           
           <p class="details">
-            {{#created}}´´½¨ÈË£º{{created_by}}, {{created_at}}{{/created}}
+            {{#created}}åˆ›å»ºäººï¼š{{created_by}}, {{created_at}}{{/created}}
             <br />
-            {{#edited}}×îºóĞŞ¶©ÈË£º{{edit_by}}, {{edit_at}}{{/edited}}
+            {{#edited}}æœ€åä¿®è®¢äººï¼š{{edit_by}}, {{edit_at}}{{/edited}}
           </p>
         </div>
 
@@ -282,7 +282,7 @@
         <input type="hidden" name="_id" value="{{_id}}" />
         
         <fieldset class="first">
-          <label for="assigned">·ÖÅä¸ø£º
+          <label for="assigned">åˆ†é…ç»™ï¼š
           <span>
             <select name="assigned" data-gravatar="true">
               {{#users}}
@@ -299,7 +299,7 @@
         </fieldset>
         
         <fieldset>
-          <label for="state">ÈÎÎñ×´Ì¬£º
+          <label for="state">ä»»åŠ¡çŠ¶æ€ï¼š
             <span>
               <select name="state">
                 {{#states}}
@@ -311,7 +311,7 @@
         </fieldset>
 
         <fieldset>
-          <label for="publish">ÊÇ·ñ·ÖÏí£º
+          <label for="publish">æ˜¯å¦åˆ†äº«ï¼š
             <span>
               <input type="checkbox" name="publish" id="publish"
                      {{#publish}}checked="checked"{{/publish}} />
@@ -320,7 +320,7 @@
         </fieldset>
         
         <fieldset class="last">
-          <label for="blocked">ÔİÍ££¨ĞèĞ­Öú£©£º
+          <label for="blocked">æš‚åœï¼ˆéœ€ååŠ©ï¼‰ï¼š
             <span>
               <input type="checkbox" name="blocked" id="blocked"
                      {{#blocked}}checked="checked"{{/blocked}} />
@@ -329,8 +329,8 @@
         </fieldset>
      
         <div class="btns">
-          <input type="submit" value="Íê³É" class="btn confirm" />
-          <input type="button" name="delete" value="É¾³ı" 
+          <input type="submit" value="å®Œæˆ" class="btn confirm" />
+          <input type="button" name="delete" value="åˆ é™¤" 
                  class="btn delete" /> 
         </div>
       </form>
