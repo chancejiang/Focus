@@ -11,16 +11,16 @@
     <header>
       <ul id="navigation">
         <li><a href="#!" class="navmine">我的任务</a></li>
-        <li><a href="#!/team" class="navteam">团队任务</a></li>
-        <li><a href="#!/focus" class="navall">最新任务</a></li>
-        <li><a href="#!/tags" class="navtags">标签分类</a></li>
-        <li><a href="#!/sync" class="navshare">同步数据</a></li>
+        <li><a href="#!/team" class="navteam">团队</a></li>
+        <li><a href="#!/focus" class="navall">最新</a></li>
+        <li><a href="#!/tags" class="navtags">标签</a></li>
+        <li><a href="#!/sync" class="navshare">同步</a></li>
       </ul>
       
       <form id="create" class="clearfix" action="#create">
         <div id="messagewrapper">
           <input type="text" name="message" id="message" 
-                 placeholder="What am I working on?" value="" />
+                 placeholder="我要忙什么呢？" value="" />
         </div>
         <input type="submit" class="btn" id="createbtn" value="创建任务" />
       </form>
@@ -100,7 +100,7 @@
     <script type="text/html" id="sync_denied">
       <h2>Sync Denied!</h2>
       <p class="main">
-        Sorry, you can only activate sync from your local account.
+        对不起，您必须用本地数据库帐号才能激活数据同步。
       </p>
     </script>
 
@@ -118,7 +118,7 @@
           <span>密码</span>
           <input type="password" value="{{password}}" name="password" />
         </label>
-        <input type="submit" value="Login" />
+        <input type="submit" value="登录" />
         or <a href="#!/signup">注册帐号</a>
       </form>
     </script>
