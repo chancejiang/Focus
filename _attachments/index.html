@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Focus - collaborative messaging for distributed teams</title>
+    <title>Focus - 粤嘉科技任务管理 - 协作就是力量！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
     <link rel="stylesheet" href="style/mobile.css" type="text/css">
   </head>
@@ -10,11 +10,11 @@
 
     <header>
       <ul id="navigation">
-        <li><a href="#!" class="navmine">Mine</a></li>
-        <li><a href="#!/team" class="navteam">Team</a></li>
-        <li><a href="#!/focus" class="navall">Latest</a></li>
-        <li><a href="#!/tags" class="navtags">Tags</a></li>
-        <li><a href="#!/sync" class="navshare">Share</a></li>
+        <li><a href="#!" class="navmine">我的任务</a></li>
+        <li><a href="#!/team" class="navteam">团队任务</a></li>
+        <li><a href="#!/focus" class="navall">最新任务</a></li>
+        <li><a href="#!/tags" class="navtags">标签</a></li>
+        <li><a href="#!/sync" class="navshare">同步</a></li>
       </ul>
       
       <form id="create" class="clearfix" action="#create">
@@ -22,7 +22,7 @@
           <input type="text" name="message" id="message" 
                  placeholder="What am I working on?" value="" />
         </div>
-        <input type="submit" class="btn" id="createbtn" value="Create" />
+        <input type="submit" class="btn" id="createbtn" value="创建任务" />
       </form>
     </header>
 
@@ -33,32 +33,32 @@
     </div>
 
     <div id="footer">
-      <a href="#!/logout">Logout</a>
+      <a href="#!/logout">退出</a>
     </div>
 
     <script type="text/html" id="sync_tpl">
 
       <form action="#sync" id="syncform" class="mainform">
         <fieldset class="first">
-          <label>User Name
+          <label>用户名：
             <span><input type="text" name="name" value="{{name}}"
                          placeholder="johndoe" /></span>
           </label>
         </fieldset>
         <fieldset>
-          <label>Password
+          <label>密码：
             <span><input type="password" value="{{password}}"
                          name="password" /></span>
           </label>
         </fieldset>
         <fieldset>
-          <label>Server
+          <label>CouchDB主机
             <span><input type="text" name="server" value="{{server}}" 
                          placeholder="example.com" /></span>
           </label>
         </fieldset>        
         <fieldset class="last">
-          <label>Workgroup
+          <label>工作组（数据库名）
           <span><input type="text" name="workgroup" value="{{workgroup}}"
                        placeholder="mywork" /></span>
           </label>
@@ -67,16 +67,16 @@
         <input type="hidden" name="action" id="syncaction" />
         
         <div id="syncbtns">
-          <button class="syncbtn" data-action="push"><div>Push</div></button>
-          <button class="syncbtn middle" data-action="pull"><div>Pull</div></button>
-          <button class="syncbtn {{cssClass}}" data-action="sync"><div>Sync</div></button>
+          <button class="syncbtn" data-action="push"><div>推数据</div></button>
+          <button class="syncbtn middle" data-action="pull"><div>拉数据</div></button>
+          <button class="syncbtn {{cssClass}}" data-action="sync"><div>双向同步</div></button>
         </div>
       </form>
 
     </script>
 
     <script type="text/html" id="tags_tpl">
-      <h2>Tags</h2>
+      <h2>标签</h2>
       <ul class="tags">
       {{#tags}}
         <li><a href="#!/tags/{{name}}" style="font-size:{{size}}px">
@@ -84,9 +84,9 @@
         </a></li>
       {{/tags}}
       </ul>
-      {{^tags}}<div class="none">No Tags :(</div>{{/tags}}
+      {{^tags}}<div class="none">暂时没有标签哦 :(</div>{{/tags}}
 
-      <h2>Mentions</h2>
+      <h2>引用</h2>
       <ul class="mentions">
         {{#mentions}}
         <li><a href="#!/mentions/{{name}}" style="font-size:{{size}}px">
@@ -94,7 +94,7 @@
         </a></li>
         {{/mentions}}
       </ul>
-      {{^mentions}}<div class="none">No Mentions :(</div>{{/mentions}}
+      {{^mentions}}<div class="none">暂时没有人引用哦 :(</div>{{/mentions}}
     </script>
 
     <script type="text/html" id="sync_denied">
@@ -106,20 +106,20 @@
 
     <script type="text/html" id="login_tpl">
       <form action="#login" class="modalform">
-        <h3>Focus - Login</h3>
+        <h3>Focus - 登录</h3>
         
         <label for="email">
-          <span>Email</span>
+          <span>邮箱</span>
           <input type="email" autocorrect="off" autocapitalize="off" 
                  value="" name="email" 
                  placeholder="email" />
         </label>
         <label for="password">
-          <span>Password</span>
+          <span>密码</span>
           <input type="password" value="{{password}}" name="password" />
         </label>
         <input type="submit" value="Login" />
-        or <a href="#!/signup">Sign Up</a>
+        or <a href="#!/signup">注册帐号</a>
       </form>
     </script>
 
@@ -130,18 +130,18 @@
         <img id="gravatar_preview" />
 
         <label for="email">
-          <span>Email</span>
+          <span>邮箱</span>
           <input type="email" autocorrect="off" autocapitalize="off" 
                  id="signup_email" 
                  value="" name="email" placeholder="username" />
         </label>
         <label for="password" {{display_pass}}>
-          <span>Password</span>
+          <span>密码</span>
           <input type="password" value="" name="password" />
         </label>
 
         <label for="name">
-          <span>Nickname</span>
+          <span>姓名/span>
           <input type="text" autocorrect="off" autocapitalize="off" 
                  id="signup_name" value="" name="name" />
         </label>
@@ -217,11 +217,11 @@
         <h2>{{name}}</h2>
       </div>
       {{/profile}}
-      <h2>Now</h2>
+      <h2>当前 | Now</h2>
       {{{now}}}
-      <h2>Later</h2>
+      <h2>延后 | Later</h2>
       {{{later}}}
-      <h2>Done</h2>
+      <h2>已完成 | Done</h2>
       {{{done}}}
     </script>
 
@@ -268,12 +268,12 @@
       <form action="#edit" id="editform" class="mainform">
 
         <div id="editheader">
-          <a href="Javascript:history.back()" class="back btn">&lt; Back</a>
+          <a href="Javascript:history.back()" class="back btn">&lt; 返回</a>
           
           <p class="details">
-            {{#created}}Created by {{created_by}}, {{created_at}}{{/created}}
+            {{#created}}创建人：{{created_by}}, {{created_at}}{{/created}}
             <br />
-            {{#edited}}Last edited by {{edit_by}}, {{edit_at}}{{/edited}}
+            {{#edited}}最后修订人：{{edit_by}}, {{edit_at}}{{/edited}}
           </p>
         </div>
 
@@ -282,7 +282,7 @@
         <input type="hidden" name="_id" value="{{_id}}" />
         
         <fieldset class="first">
-          <label for="assigned">Assigned to:
+          <label for="assigned">分配给：
           <span>
             <select name="assigned" data-gravatar="true">
               {{#users}}
@@ -299,7 +299,7 @@
         </fieldset>
         
         <fieldset>
-          <label for="state">State:
+          <label for="state">任务状态：
             <span>
               <select name="state">
                 {{#states}}
@@ -311,7 +311,7 @@
         </fieldset>
 
         <fieldset>
-          <label for="publish">Share
+          <label for="publish">是否分享：
             <span>
               <input type="checkbox" name="publish" id="publish"
                      {{#publish}}checked="checked"{{/publish}} />
@@ -320,7 +320,7 @@
         </fieldset>
         
         <fieldset class="last">
-          <label for="blocked">Blocked
+          <label for="blocked">暂停（需协助）：
             <span>
               <input type="checkbox" name="blocked" id="blocked"
                      {{#blocked}}checked="checked"{{/blocked}} />
@@ -329,8 +329,8 @@
         </fieldset>
      
         <div class="btns">
-          <input type="submit" value="Finish Editing" class="btn confirm" />
-          <input type="button" name="delete" value="Delete" 
+          <input type="submit" value="完成" class="btn confirm" />
+          <input type="button" name="delete" value="删除" 
                  class="btn delete" /> 
         </div>
       </form>
