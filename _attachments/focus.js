@@ -87,7 +87,7 @@ var Focus = (function () {
   router.get("!/focus", function () {
     fetch("focus-time", {descending:true, limit:25}, function(data) {
       renderIfUrl("!/focus", "#items_tpl", {
-        title     : "ÍÅ¶ÓÈ«²¿ÈÎÎñ",
+        title     : "å›¢é˜Ÿå…¨éƒ¨ä»»åŠ¡",
         items     : viewToList(data),
         urlPrefix : "/focus"
       });
@@ -419,7 +419,7 @@ var Focus = (function () {
     
     fetch(view, args, function(data) {
       render("#items_tpl", {
-        title     : "²é¿´°üº¬±êÇ© '" + pre + key + "'µÄÈÎÎñ",
+        title     : "æŸ¥çœ‹åŒ…å«æ ‡ç­¾ '" + pre + key + "'çš„ä»»åŠ¡",
         items     : viewToList(data),
         urlPrefix : "/" + view + "/" + key
       });
