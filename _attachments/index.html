@@ -58,9 +58,9 @@
           </label>
         </fieldset>        
         <fieldset class="last">
-          <label>工作组（数据库名）
+          <label>团队（数据库名）
           <span><input type="text" name="workgroup" value="{{workgroup}}"
-                       placeholder="mywork" /></span>
+                       placeholder="团队数据库名" /></span>
           </label>
         </fieldset>
         
@@ -100,7 +100,7 @@
     <script type="text/html" id="sync_denied">
       <h2>数据同步失败！</h2>
       <p class="main">
-        不好意思，您必须用数据库本地帐号才能激活数据同步。
+        不好意思，您必须用数据库管理员才能激活数据同步。
       </p>
     </script>
 
@@ -112,7 +112,7 @@
           <span>邮箱</span>
           <input type="email" autocorrect="off" autocapitalize="off" 
                  value="" name="email" 
-                 placeholder="email" />
+                 placeholder="这里填写邮箱" />
         </label>
         <label for="password">
           <span>密码</span>
@@ -133,7 +133,7 @@
           <span>邮箱</span>
           <input type="email" autocorrect="off" autocapitalize="off" 
                  id="signup_email" 
-                 value="" name="email" placeholder="username" />
+                 value="" name="email" placeholder="这里填写邮箱" />
         </label>
         <label for="password" {{display_pass}}>
           <span>密码</span>
@@ -147,9 +147,9 @@
         </label>
 
         <label for="email" style="display:none;" >
-          <span>工作组</span>
+          <span>团队 - WorkGroup</span>
           <input type="text" autocorrect="off" autocapitalize="off" 
-                 value="local" name="workgroup" placeholder="username" />
+                 value="local" name="workgroup" placeholder="用户名" />
         </label>
         <input type="submit" value="注册帐号" />
         <span {{display_pass}}>or <a href="#!/login">登录</a></span>
@@ -170,7 +170,7 @@
             </a>
         </li>
         {{/profile}}{{/users}}
-        {{^users}}<li class="none">您的小组还没人加入</li>{{/users}}
+        {{^users}}<li class="none">您的团队还没人加入</li>{{/users}}
       </ul>
     </script>
 
@@ -246,7 +246,7 @@
           <label for="email">Email
             <span><input type="email" autocorrect="off" autocapitalize="off" 
                          id="signup_email" 
-                         value="" name="email" placeholder="username" />
+                         value="" name="email" placeholder="用户名" />
             </span>
           </label>
         </fieldset>
