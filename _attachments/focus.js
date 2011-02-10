@@ -87,7 +87,7 @@ var Focus = (function () {
   router.get("!/focus", function () {
     fetch("focus-time", {descending:true, limit:25}, function(data) {
       renderIfUrl("!/focus", "#items_tpl", {
-        title     : "Focus View",
+        title     : "团队全部任务",
         items     : viewToList(data),
         urlPrefix : "/focus"
       });
@@ -419,7 +419,7 @@ var Focus = (function () {
     
     fetch(view, args, function(data) {
       render("#items_tpl", {
-        title     : "Viewing '" + pre + key + "'",
+        title     : "查看包含标签 '" + pre + key + "'的任务",
         items     : viewToList(data),
         urlPrefix : "/" + view + "/" + key
       });
