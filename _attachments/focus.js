@@ -114,7 +114,7 @@ var Focus = (function () {
       name     : data.email,
       password : data.password,
       success  : function() { window.location.reload(true); },
-      error    : function() { notifyMsg("Invalid Login Credentials"); }
+      error    : function() { notifyMsg("帐号无效"); }
     });
   });
   
@@ -130,7 +130,7 @@ var Focus = (function () {
     db.saveDoc(doc, {
       success : function(r) {
         router.go(getRedirectUrl());
-        notifyMsg("Updated");
+        notifyMsg("已更新");
       }
     });
   });
@@ -155,7 +155,7 @@ var Focus = (function () {
     db.saveDoc(doc, {
      success : function(r) {
        $("#message").val("");
-       notifyMsg("Added new item");
+       notifyMsg("已创建新任务");
      }
     });
   });
@@ -187,12 +187,12 @@ var Focus = (function () {
     if (data.action === "pull") {
       replicate(remoteSyncUrl(), data.workgroup, false, function () {
         $button.removeClass("working");
-        notifyMsg("Replication Complete");
+        notifyMsg("同步完成");
       });
     } else if (data.action === "push") {
       replicate(data.workgroup, remoteSyncUrl(), false, function () {
         $button.removeClass("working");
-        notifyMsg("Replication Complete");
+        notifyMsg("同步完成");
       });      
     } else if (data.action === "sync") {
       replicate(data.workgroup, remoteSyncUrl(), true, function () {
@@ -204,7 +204,7 @@ var Focus = (function () {
   router.post("delete", function (e, data) {
     db.removeDoc({_id: data._id, _rev: data._rev}, {
       success: function() {
-        notifyMsg("deleted");
+        notifyMsg("已删除");
         router.go(getRedirectUrl());
       }
     });  
