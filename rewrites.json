@@ -1,22 +1,10 @@
 [
    {
        "from": "/",
-       "to": "/index.html"
-   },
+       "to": "/focus/_design/focus/index.html"
+   }
    {
        "from": "/*",
-       "to": "/*"
-   },
-   {
-       "from": "/index.html*",
-       "to": "/index.html*"
-   },
-   {
-       "from": "/style/*",
-       "to": "/style/*"
-   },
-   {
-       "from": "/_view/*",
-       "to": "/_view/*"
+       "to": "/focus/_design/focus/*"
    }
 ]
