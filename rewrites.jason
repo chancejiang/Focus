@@ -1,0 +1,22 @@
+[
+   {
+       "from": "/",
+       "to": "/index.html"
+   },
+   {
+       "from": "/*",
+       "to": "/*"
+   },
+   {
+       "from": "/index.html*",
+       "to": "/index.html*"
+   },
+   {
+       "from": "/style/*",
+       "to": "/style/*"
+   },
+   {
+       "from": "/_view/*",
+       "to": "/_view/*"
+   }
+]
