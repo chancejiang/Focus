@@ -2,7 +2,7 @@
    {
        "from": "/",
        "to": "/focus/_design/focus/index.html"
-   }
+   },
    {
        "from": "/*",
        "to": "/focus/_design/focus/*"
