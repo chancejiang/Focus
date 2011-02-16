@@ -1,10 +1,19 @@
 [
-   {
-       "from": "",
-       "to": "index.html"
-   },
-   {
-       "from": "*",
-       "to": "*"
-   }
+  {"to": "index.html", "from": ""},
+  {"to": "control-pause.png", "from": "control-pause.png"},
+  {"to": "eye2.png", "from": "eye2.png"},
+  {"to":"focus.js", "from":"focus.js"},
+  {"to": "friday.html", "from": "friday.html"},
+  {"to": "hammer.png", "from": "hammer.png"},
+  {"to": "style/*", "from": "style/*"},
+  {"to": "loading.gif", "from": "loading.gif"},
+  {"to": "loadingsmall.gif", "from": "loadingsmall.gif"},
+  {"to": "md5.js", "from": "md5.js"},
+  {"to":"mustache.js","from":"mustache.js"},
+  {"to":"outline.png","from":"outline.png"},
+  {"to":"pencil.png","from":"pencil.png"},
+  {"to":"tick.png","from":"tick.png"},
+  {"to":"ticket.png","from":"ticket.png"},
+  {"to":"utils.js","from":"utils.js"},
+  {"to": "../../*", "from": "focus/*"}
 ]
